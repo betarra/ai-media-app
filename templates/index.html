@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>أداة توليد الفيديو والصوت والذكريات</title>
+    <style>
+        body { font-family: Tahoma, sans-serif; background-color: #121212; color: #ffffff; padding: 20px; }
+        .container { max-width: 650px; margin: auto; background: #1e1e1e; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; color: #00bcd4; }
+        input[type="file"], input[type="text"], textarea, select { width: 100%; padding: 10px; background: #2d2d2d; border: 1px solid #444; color: #fff; border-radius: 5px; box-sizing: border-box; }
+        textarea { height: 80px; resize: vertical; }
+        .section-box { background: #252525; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px dashed #00bcd4; }
+        button { background-color: #00bcd4; color: #000; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 16px; }
+        button:hover { background-color: #008ba3; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>منصة صناعة الوسائط والذكاء الاصطناعي الشاملة</h2>
+        <form action="/generate" method="POST" enctype="multipart/form-data">
+            
+            <!-- القسم الأساسي للصوت والصورة -->
+            <div class="form-group">
+                <label>اختر الصورة الشخصية للمتحدث:</label>
+                <input type="file" name="image" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label>ارفع عينة الصوت (ملف صوتي لصاحب الصوت):</label>
+                <input type="file" name="audio" accept="audio/*">
+            </div>
+
+            <div class="form-group">
+                <label>اكتب النص المراد قراءته بصوت العينة:</label>
+                <textarea name="text_prompt" placeholder="اكتب النص هنا..."></textarea>
+            </div>
+
+            <hr style="border-color: #444; margin: 20px 0;">
+
+            <!-- الخانة الأولى الجديدة: ميزة إحياء الذكريات (صورة وشاهدة قبر وحركة) -->
+            <div class="section-box">
+                <label style="color: #ff9800;">🕊️ قسم استرجاع الذكريات (قبر وحركة):</label>
+                <div class="form-group" style="margin-top: 10px;">
+                    <label>تاريخ الولادة والوفاة (مثال: 1950 - 2022):</label>
+                    <input type="text" name="memorial_dates" placeholder="أدخل المواليد والوفاة...">
+                </div>
+                <div class="form-group">
+                    <label>اختر نمط الحركة والمشهد:</label>
+                    <select name="animation_style">
+                        <option value="standing_grave">الوقوف خلف شاهدة القبر والنظر إليها</option>
+                        <option value="waving">التلويح باليد والابتسام</option>
+                        <option value="looking_around">الالتفات بحركة هادئة</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- الخانة الثانية الجديدة: تحويل النص إلى صورة -->
+            <div class="section-box">
+                <label style="color: #4caf50;">🎨 قسم توليد الصور من النصوص (Text-to-Image):</label>
+                <div class="form-group" style="margin-top: 10px;">
+                    <label>اكتب وصف الصورة التي تريد توليدها:</label>
+                    <input type="text" name="image_prompt" placeholder="مثال: طبيعة خضراء ساحرة وقت غروب الشمس...">
+                </div>
+            </div>
+
+            <button type="submit">بدء التوليد والمعالجة الشاملة</button>
+        </form>
+    </div>
+</body>
+</html>
