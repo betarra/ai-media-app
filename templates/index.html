@@ -39,19 +39,28 @@
             <hr style="border-color: #444; margin: 20px 0;">
 
             <!-- الخانة الأولى الجديدة: ميزة إحياء الذكريات (صورة وشاهدة قبر وحركة) -->
+            <!-- قسم استرجاع الذكريات المطور -->
             <div class="section-box">
-                <label style="color: #ff9800;">🕊️ قسم استرجاع الذكريات (قبر وحركة):</label>
+                <label style="color: #ff9800;">🕊️ قسم استرجاع الذكريات (المتوفي والقبور والحركة):</label>
+                
                 <div class="form-group" style="margin-top: 10px;">
+                    <label>رفع صورة الشخص المتوفي:</label>
+                    <input type="file" name="deceased_image" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label>رفع صورة القبر الحقيقي (اختياري):</label>
+                    <input type="file" name="grave_image" accept="image/*">
+                </div>
+
+                <div class="form-group">
                     <label>تاريخ الولادة والوفاة (مثال: 1950 - 2022):</label>
                     <input type="text" name="memorial_dates" placeholder="أدخل المواليد والوفاة...">
                 </div>
+
                 <div class="form-group">
-                    <label>اختر نمط الحركة والمشهد:</label>
-                    <select name="animation_style">
-                        <option value="standing_grave">الوقوف خلف شاهدة القبر والنظر إليها</option>
-                        <option value="waving">التلويح باليد والابتسام</option>
-                        <option value="looking_around">الالتفات بحركة هادئة</option>
-                    </select>
+                    <label>وصف المشهد والحركة والملابس (مثال: يرتدي كلابية بيضاء، يقف خلف شاهدة القبر وينظر بتهذيب):</label>
+                    <textarea name="memorial_prompt" placeholder="اكتب التفاصيل الدقيقة للمشهد هنا..."></textarea>
                 </div>
             </div>
 
